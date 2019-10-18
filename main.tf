@@ -38,11 +38,11 @@ resource "aws_launch_configuration" "example" {
 	instance_type		= "t2.micro"
 	security_groups = [aws_security_group.instance.id
 
-	user_data = <<-EOF
-							#!/bin/bash
-							echo 'Robert, sup nigga' > index.html
-							nohup busybox httpd -f -p 8080 &
-							EOF
+	#user_data = <<-EOF
+	#						#!/bin/bash
+	#						echo 'Robert, sup nigga' > index.html
+	#						nohup busybox httpd -f -p 8080 &
+	#						EOF
 
 	# Terraform will invert the order in which it replaces resources, creating the replacement resource first
 	lifecycle { 
